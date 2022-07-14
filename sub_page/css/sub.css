@@ -1,0 +1,194 @@
+/* common */
+/* gentle font */
+@import url('http://db.onlinewebfonts.com/c/04b98e0c477863adcdaae7d4d98c063a?family=GentleMonster');
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+* {margin: 0; padding: 0; font-family: 'Noto Sans KR', sans-serif; box-sizing: border-box;} 
+/* font-family: "GentleMonster" */
+li {list-style: none;}
+a {text-decoration: none; color: inherit;}
+.inner {
+  width: 1400px;
+  margin: 0 auto;
+}
+body {
+  height: 3000px;
+}
+/* header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 1);
+  color: #fff;
+  height: 65px;
+  overflow: hidden;
+  padding: 20px 50px;
+  width: 100%;
+  z-index: 99;
+  transition: all 0.3s;
+}
+.header.hover {
+  background-color: rgba(0, 0, 0, 1);
+  height: auto;
+  transition: all 0.3s;
+}
+.header.scroll {
+  height: 40px;
+  padding-top: 10px;
+  font-size: 14px;
+  background-color: #000;
+  color: #fff;
+}
+.header.scroll .header__logo a{
+  font-size: 18px;
+}
+.header.scroll .gnb li{
+  font-size: 12px;
+}
+.header.scroll .gnb li span {
+  font-size: 20px;
+}
+.header.scroll .sub-menu {
+  font-size: 12px;
+}
+.header.scroll .search-area {
+  top: 40px;
+}
+.header.hover.scroll{
+  height: auto;
+}
+.header .header-container {
+  display: flex;
+  justify-content: space-between;
+}
+.header .header-container::before {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: #666;
+  position: absolute;
+  left: 0;
+  top: 70px;
+}
+.header.scroll .header-container::before {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: #666;
+  position: absolute;
+  left: 0;
+  top: 50px;
+}
+.header .header__logo a{
+  font-family: "GentleMonster";
+  font-size:24px;
+  height: 30px;
+}
+.header .lnb {
+  text-align: center;
+  display: flex;
+}
+.header .lnb>li{
+  padding: 0 20px;
+}
+.header .gnb {
+  display: flex;
+}
+.header .gnb li{
+  cursor: pointer;
+  height: 30px;
+  margin-left: 20px;
+  font-size: 14px;
+}
+/* sub-menu */
+.sub-menu {
+  font-size: 14px;
+  margin-top: 30px;
+
+}
+.sub-menu>li>a {
+  display: block;
+  padding: 5px 0;
+}
+.sub-menu>li>a:hover {
+  text-decoration: underline;
+}
+/* search-area */
+.search-area {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #000;
+  border-top: 1px solid #666;
+  z-index: 8;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  padding-top: 30px;
+}
+.search-area .title{
+  width: 400px;
+  text-align: left;
+  margin: 0 auto 10px auto;
+  font-size: 34px;
+  font-weight: 700;
+}
+.search__input {
+  margin: 0 auto;
+  border: 1px solid #fff;
+  width: 400px;
+  height: 35px;
+  border-radius: 10px;
+  display: flex;
+  background-color: #fff;
+}
+.search__input input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  margin-left: 20px;
+}
+.search__input span {
+  color: #000;
+  line-height: 35px;
+  margin-right: 10px;
+}
+.search-area .search__word {
+  width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.search-area p {
+  text-align: center;
+  font-size: 24px;
+  margin: 20px 0 10px 0;
+}
+.search-area .search__word li {
+  width: 20%;
+  padding: 3px 10px;
+  margin-right: 10px;
+  text-align: center;
+  background-color: #eee;
+  border-radius: 15px;
+  color: #000;
+}
+
+.tab__btn {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.tab__btn .tab {
+  width: 100px;
+  overflow: hidden;
+  text-align: center;
+  font-size: 14px;
+}
+.tab__btn .tab img {
+  width: 100px; height: 100px;
+  border-radius: 50%;
+}
