@@ -100,32 +100,52 @@ colorhearts.forEach(function(colorheart, index){
 })
 
 
-const oranges = document.querySelectorAll('.orange');
-const greens = document.querySelectorAll('.green');
-const blacks = document.querySelectorAll('.black');
+const color01s = document.querySelectorAll('.color-01');
+const color02s = document.querySelectorAll('.color-02');
+const color03s = document.querySelectorAll('.color-03');
+const color04s = document.querySelectorAll('.color-04');
+const color05s = document.querySelectorAll('.color-05');
 const productImgs = document.querySelectorAll('.product img')
 
-oranges.forEach(function(orange, index){
-  orange.addEventListener('mouseover',function(){
+
+color01s.forEach(function(color01, index){
+  color01.addEventListener('mouseover',function(){
+    productImgs[index].src = productImgs[index].src.replace('_01.jpg','_01.jpg')
+  })
+  color01.addEventListener('mouseout',function(){
+    productImgs[index].src = productImgs[index].src.replace('_01.jpg','_01.jpg')
+  })
+})
+color02s.forEach(function(color02, index){
+  color02.addEventListener('mouseover',function(){
     productImgs[index].src = productImgs[index].src.replace('_01.jpg','_02.jpg')
   })
-  orange.addEventListener('mouseout',function(){
+  color02.addEventListener('mouseout',function(){
     productImgs[index].src = productImgs[index].src.replace('_02.jpg','_01.jpg')
   })
 })
+color03s.forEach(function(color03, index){
+  color03.addEventListener('mouseover',function(){
+    productImgs[index].src = productImgs[index].src.replace('_01.jpg','_03.jpg')
+  })
+  color03.addEventListener('mouseout',function(){
+    productImgs[index].src = productImgs[index].src.replace('_03.jpg','_01.jpg')
+  })
+})
+color04s.forEach(function(color04, index){
+  color04.addEventListener('mouseover',function(){
+    productImgs[index].src = productImgs[index].src.replace('_01.jpg','_04.jpg')
+  })
+  color04.addEventListener('mouseout',function(){
+    productImgs[index].src = productImgs[index].src.replace('_04.jpg','_01.jpg')
+  })
+})
+color05s.forEach(function(color05, index){
+  color05.addEventListener('mouseover',function(){
+    productImgs[index].src = productImgs[index].src.replace('_01.jpg','_04.jpg')
+  })
+  color05.addEventListener('mouseout',function(){
+    productImgs[index].src = productImgs[index].src.replace('_04.jpg','_01.jpg')
+  })
+})
 
-// orange.addEventListener('mouseout',function(){
-//   productImg.src = productImg.src.replace('_01_02.jpg','_01_01.jpg')
-// })
-// green.addEventListener('mouseover',function(){
-//   productImg.src = productImg.src.replace('_01_01.jpg','_01_03.jpg')
-// })
-// green.addEventListener('mouseout',function(){
-//   productImg.src = productImg.src.replace('_01_03.jpg','_01_01.jpg')
-// })
-// black.addEventListener('mouseover',function(){
-//   productImg.src = productImg.src.replace('_01_01.jpg','_01_01.jpg')
-// })
-// black.addEventListener('mouseout',function(){
-//   productImg.src = productImg.src.replace('_01_01.jpg','_01_01.jpg')
-// })

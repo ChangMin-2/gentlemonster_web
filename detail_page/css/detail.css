@@ -242,3 +242,231 @@ img {display: block;}
   border-radius: 50%;
 }
 /* Header&search&cart&fixed-btn */
+
+
+/* product-detail */
+.product {
+  margin-top: 200px;
+  display: flex;
+}
+.product .product__img {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 926px;
+  margin-right: 70px;
+}
+.product__text {
+  width: 400px;
+  padding-top: 100px;
+} 
+.product__text .product__title{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.product__text .product__title p:nth-child(1) {
+  font-weight: bold;
+  font-size: 18px;
+}
+.product__text .product__title p:nth-child(2) {
+  font-size: 14px;
+  color: #333;
+}
+.product__text .other-color {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+.product__text .product__info {
+  font-size: 15px;
+  line-height: 25px;
+  color: #333;
+  margin-bottom: 50px;
+}
+.product__text .product__button {}
+.product__text .product__button button{
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  border-radius: 25px;
+  border: 1px solid #000;
+  background-color: #f7f7f7;
+  color: rgb(18, 18, 18);
+  margin-bottom: 10px;
+}
+.product__text .product__button .black__button {
+  background-color: rgb(18, 18, 18);
+  color: #fff;
+}
+.product__text .free {
+  font-weight: bold;
+  font-size: 14px;
+  padding-top: 10px;
+}
+.product__text .service {
+  margin-top: 50px;
+}
+.product__text .service ul li {
+  border-bottom: 1px solid #666;
+  font-size: 13px;
+  overflow: hidden;
+  height: 48px;
+  transition: all 0.2s;
+}
+.product__text .service ul li.click {
+  height: 250px;
+}
+
+.product__text .service .service__title {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  padding: 10px 0;
+}
+.product__text .service .service__detail {
+  line-height: 25px;
+  padding: 0 20px;
+}
+
+/* more__insta */
+.more__insta {
+  margin-top: 200px;
+}
+.more__insta .inner p:nth-child(1) {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.more__insta .inner p:nth-child(2) {
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+.more__insta .insta_photo {
+  display: flex;
+  gap: 10px;
+}
+.more__insta .insta_photo>div img {
+  margin-bottom: 10px;
+}
+
+/* similar */
+.similar {}
+.similar .inner> p{
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.similar_photo {
+  display: flex;
+  gap: 10px;
+}
+.similar_photo img{
+  margin-bottom: 10px;
+}
+.similar_photo .similar_photo__title{
+  font-size: 14px;
+}
+.similar_photo .similar_photo__price{
+  font-size: 12px;
+  color: #333;
+}
+.similar_photo .similar_photo__color{
+  font-size: 10px;
+  color: #666;
+}
+
+
+
+/* footer */
+.footer {
+  background-color: rgb(27, 27, 27);
+  color: #fff;
+  padding-top: 50px;
+  margin-top: 100px;
+}
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__top .footer__title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px
+}
+.footer__top .footer__title>p {
+  font-family: "GentleMonster";
+  font-weight: bold;
+  font-size: 24px;
+}
+.footer__top .footer__search {
+  display: flex;
+  padding: 3px 10px;
+  justify-content: space-between;
+  border: 1px solid #eee;
+  border-radius: 10px;
+}
+.footer__top .footer__search input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+}
+.footer__top .customer {
+  display: flex;
+  gap: 70px;
+}
+.footer__top .customer ul {
+  width: 100px;
+}
+.footer__top .customer ul .li__title {
+  font-weight: bold;
+  font-size: 15px;
+}
+.footer__top .customer ul li {
+  font-size: 14px;
+  margin-bottom: 15px;
+} 
+.footer__bottom {
+  margin-top: 30px;
+  padding: 20px 0;
+  border-top: 1px solid #757575;
+}
+.footer__bottom .inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #757575;
+}
+.footer__bottom .inner .copyright {
+  font-family: "GentleMonster";
+}
+.footer__bottom .inner .address {
+  font-size: 11px;
+  position: relative;
+}
+.footer__bottom .inner .address::before {
+  content: '';
+  width: 1px;
+  height: 30px;
+  background-color: #757575;
+  position: absolute;
+  top: 7px;
+  left: -20px;
+}
+.footer__bottom .inner .address::after {
+  content: '';
+  width: 1px;
+  height: 30px;
+  background-color: #757575;
+  position: absolute;
+  top: 7px;
+  right: -20px;
+}
+.footer__bottom .inner .mine {
+  font-size: 11px;
+}

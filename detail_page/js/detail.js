@@ -53,3 +53,21 @@ topBtn.addEventListener('click', ()=>{
 })
 
 /* Header&search&cart */
+
+
+
+// service
+const serviceLists = document.querySelectorAll('.service__list');
+const serviceDetails = document.querySelectorAll('.service__detail');
+
+
+serviceLists.forEach(function(serviceList, index){
+  serviceList.addEventListener('click',function(){
+    if(serviceList.classList.contains('click')){
+      serviceList.classList.remove('click')
+    }else {
+      serviceList.classList.add('click')
+    }
+   
+  })
+})
