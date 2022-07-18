@@ -136,6 +136,29 @@ img {display: block;}
   background-color: #777;
   color: #fff;
 }
+.cart__contents ul>li {
+  display: flex;
+  margin-bottom: 5px;
+}
+.cart__contents ul>li img{
+  width: 80px;
+  height: 80px;
+}
+.cart__contents .text-area {
+  padding-left: 10px;
+  font-size: 10px;
+  width: 70%;
+}
+.cart__contents .text-area p{
+  font-size: 10px;
+} 
+.cart__contents .text-area .product__del {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+
 /* search */
 .search {
   position: fixed;
@@ -144,7 +167,7 @@ img {display: block;}
   width: 100%;
   height: 0;
   background-color: rgb(18, 18, 18);
-  border-top: 1px solid #eee;
+  border-top: 1px solid #666;
   color: #fff;
   transition: all 0.3s;
   overflow: hidden;
@@ -210,9 +233,12 @@ img {display: block;}
 /* fixed-btn */
 .fixed-btn {
   position: fixed;
+  z-index: 4;
   bottom: 50px;
   right: 40px;
-
+}
+.fixed-btn .to-top {
+  opacity: 0;
 }
 .fixed-btn ul li {
   border: 1px solid #666;
@@ -268,7 +294,69 @@ img {display: block;}
 }
 
 /* product-sec */
-.product-sec {}
+.product-sec {position: relative;}
+.classification {
+  display: none;
+  width: 100%;
+  top: 32px;
+  z-index: 3;
+  background-color: #fff;
+  position: absolute;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+}
+.classification__container {
+  display: flex;
+}
+.classification__container>div {
+  width: 20%;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding-left: 20px;
+  margin-bottom: 40px;
+}
+.classification__container>div:last-child {
+  border-right: none;
+}
+.classification__container>div>p {
+  font-weight: bold;
+  font-size: 12px;
+  margin: 20px 0;
+}
+.classification__container .input__container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.classification__container .input__container>div {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  font-size: 11px;
+  margin-bottom: 10px;
+}
+.classification__container .input__container>div input {
+  margin-right: 5px;
+}
+.classification .btn-area {
+  position: absolute;
+  display: flex;
+  gap: 10px;
+  bottom: 10px;
+  right: 10px;
+}
+.classification button {
+  display: block;
+  border: 1px solid #666;
+  background-color: #fff;
+  width: 150px;
+  padding: 5px 0;
+  font-size: 12px;
+  border-radius: 5px;
+}
+.classification button:nth-child(2) {
+  background-color: #000;
+  color: #fff;
+}
 .product__classification {
   display: flex;
   justify-content: space-between;
@@ -297,6 +385,12 @@ img {display: block;}
   background-color: #666;
   position: absolute;
 }
+.product__classification__left .catView,
+.product__classification__left .tintView,
+.product__classification__left .circleView,
+.product__classification__left .squareView {
+  display: none;
+}
 .product__classification__right p {
   display: flex;
   align-items: center;
@@ -308,13 +402,13 @@ img {display: block;}
 .product__container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 .product {
   width: 338px;
   margin-bottom: 15px;
   transition: all 0.2s;
   position: relative;
+  margin-right: 10px;
 }
 .product img {
   width: 100%;
@@ -324,6 +418,46 @@ img {display: block;}
   margin-top: 5px;
   padding: 0 5px;
 }
+.product .product__text.view{
+  position: absolute;
+  width: 225px;
+  height: 225px;
+  top: -6px;
+  left: 0;
+  background: rgba(0,0,0,0.7);
+  text-align: center;
+  padding-top: 70px;
+  opacity: 0;
+  transition: all 0.2s;
+}
+.product .product__text.view:hover {
+  opacity: 1;
+}
+.product .product__text.view .product__title {
+  font-size: 20px;
+  color: #fff;
+  display: block;
+  margin-bottom: 10px;
+}
+.product .product__text.view .product__title .product__btn {
+  justify-content: center;
+}
+.product .product__text.view .product__title .product__btn span {
+  color: #fff;
+  text-align: center;
+  margin-top: 10px;
+}
+.product .product__text.view .product__title .product__btn .favorite-icon {
+  color: rgb(244, 97, 97);
+}
+.product .product__text.view .product__price {
+  color: #fff;
+}
+.product .product__text.view .color__container {
+  display: none;
+}
+
+
 .product .product__text .product__title{  
   display: flex;
   justify-content: space-between;
@@ -372,8 +506,12 @@ img {display: block;}
 .pink {background-color: rgba(235, 173, 173, 0.781)}
 .blue {background-color: rgba(45, 185, 250, 0.781)}
 .brown {background-color: rgba(122, 76, 23, 0.7)}
-
-
+.gold {background-color: rgba(230, 226, 19, 0.7)}
+.gray {background-color: rgba(177, 177, 177, 0.7)}
+.ivory {background-color: rgba(233, 232, 179, 0.7)}
+.purple {background-color: rgba(195, 81, 240, 0.719)}
+.white {background-color: rgba(230, 228, 228, 0.719)}
+.red {background-color: rgba(224, 64, 64, 0.719)}
 /* footer */
 .footer {
   background-color: rgb(27, 27, 27);

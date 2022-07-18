@@ -52,6 +52,18 @@ topBtn.addEventListener('click', ()=>{
   })
 })
 
+window.addEventListener('scroll',function(){
+  if(this.scrollY>200){
+    gsap.to(topBtn, 0.3, {
+      opacity:1
+    })
+  }else {
+    gsap.to(topBtn, 0.3 ,{
+      opacity:0
+    })
+  }
+})
+
 /* Header&search&cart */
 
 // visual swiper
@@ -132,6 +144,29 @@ const productTab02 = document.querySelector('.product__tab-02')
 const productSun = document.querySelector('.sunglasses'); 
 const productGla = document.querySelector('.glasses'); 
 
+const hearts = document.querySelectorAll('.favorite_border-icon');
+const colorhearts = document.querySelectorAll('.favorite-icon');
+const countheartBtn = document.querySelector('.count-heart');
+let heartCount = 0;
+
+countheartBtn.textContent 
+
+hearts.forEach(function(heart, index){
+  heart.addEventListener('click',function(){
+    hearts[index].style.display = 'none'
+    colorhearts[index].style.display = 'block'
+    heartCount++;
+    countheartBtn.innerText= heartCount; 
+  })
+})
+colorhearts.forEach(function(colorheart, index){
+  colorheart.addEventListener('click',function(){
+    colorhearts[index].style.display = 'none'
+    hearts[index].style.display = 'block'
+    heartCount--;
+    countheartBtn.innerText= heartCount; 
+  })
+})
 
 productTab01.addEventListener('click',function(){
   productTab01.style.color = '#000'

@@ -52,18 +52,38 @@ topBtn.addEventListener('click', ()=>{
   })
 })
 
+window.addEventListener('scroll',function(){
+  if(this.scrollY>200){
+    gsap.to(topBtn, 0.3, {
+      opacity:1
+    })
+  }else {
+    gsap.to(topBtn, 0.3 ,{
+      opacity:0
+    })
+  }
+})
+
+
 /* Header&search&cart */
 
 // product__container 
 const view01 = document.querySelector('.view-mode01');
 const view02 = document.querySelector('.view-mode02');
 const products = document.querySelectorAll('.product');
+const productTexts = document.querySelectorAll('.product__text');
+const filter = document.querySelector('.filter');
+const filterSheet = document.querySelector('.classification');
 
 view01.addEventListener('click',function(){
   view01.style.display = 'none';
   view02.style.display = 'flex';
   products.forEach(function(product){
     product.style.width = '225px'
+    product.style.marginRight = '8px'
+  })
+  productTexts.forEach(function(productText){
+    productText.classList.add('view')
   })
 })
 view02.addEventListener('click',function(){
@@ -71,7 +91,23 @@ view02.addEventListener('click',function(){
   view02.style.display = 'none';
   products.forEach(function(product){
     product.style.width = '338px'
+    product.style.marginRight = '10px'
   })
+  productTexts.forEach(function(productText){
+    productText.classList.remove('view')
+  })
+})
+
+let filterState = false 
+
+filter.addEventListener('click',function(){
+  if(!filterState){
+    filterSheet.style.display ='block';
+    filterState = true
+  }else {
+    filterSheet.style.display ='none';
+    filterState = false
+  }
 })
 
 
@@ -142,10 +178,96 @@ color04s.forEach(function(color04, index){
 })
 color05s.forEach(function(color05, index){
   color05.addEventListener('mouseover',function(){
-    productImgs[index].src = productImgs[index].src.replace('_01.jpg','_04.jpg')
+    productImgs[index].src = productImgs[index].src.replace('_01.jpg','_05.jpg')
   })
   color05.addEventListener('mouseout',function(){
-    productImgs[index].src = productImgs[index].src.replace('_04.jpg','_01.jpg')
+    productImgs[index].src = productImgs[index].src.replace('_05.jpg','_01.jpg')
   })
 })
 
+
+
+const tabBtns = document.querySelectorAll('.tab');
+// const products = document.querySelectorAll('.product');
+const tints = document.querySelectorAll('.tint')
+const circles = document.querySelectorAll('.circle')
+const squares = document.querySelectorAll('.square')
+const cats = document.querySelectorAll('.car')
+
+
+const totalView = document.querySelector('.totalView')
+const catView = document.querySelector('.catView ')
+const tintView = document.querySelector('.tintView')
+const circleView = document.querySelector('.circleView')
+const squareView = document.querySelector('.squareView')
+
+tabBtns[0].addEventListener('click',function(){
+  products.forEach((product)=>{
+    product.style.display = 'block';
+  })
+  totalView.style.display = 'block';
+  catView.style.display = 'none';
+  tintView.style.display = 'none';
+  circleView.style.display = 'none';
+  squareView.style.display = 'none';
+})
+// cat
+tabBtns[1].addEventListener('click',function(){
+  products.forEach((product)=>{
+    if(!product.classList.contains('cat')){
+      product.style.display = 'none'
+    }else {
+      product.style.display = 'block'
+    }
+  })
+  totalView.style.display = 'none';
+  catView.style.display = 'block';
+  tintView.style.display = 'none';
+  circleView.style.display = 'none';
+  squareView.style.display = 'none';
+})
+// tint
+tabBtns[2].addEventListener('click',function(){
+  products.forEach((product)=>{
+    if(!product.classList.contains('tint')){
+      product.style.display = 'none'
+    }else {
+      product.style.display = 'block'
+    }
+  })
+  totalView.style.display = 'none';
+  catView.style.display = 'none';
+  tintView.style.display = 'block';
+  circleView.style.display = 'none';
+  squareView.style.display = 'none';
+})
+// circle
+tabBtns[3].addEventListener('click',function(){
+  products.forEach((product)=>{
+    if(!product.classList.contains('circle')){
+      product.style.display = 'none'
+    }else {
+      product.style.display = 'block'
+    }
+  })
+  totalView.style.display = 'none';
+  catView.style.display = 'none';
+  tintView.style.display = 'none';
+  circleView.style.display = 'block';
+  squareView.style.display = 'none';
+})
+// square
+tabBtns[4].addEventListener('click',function(){
+  products.forEach((product)=>{
+    if(!product.classList.contains('square')){
+      product.style.display = 'none'
+    }else {
+      product.style.display = 'block'
+    }
+  })
+  totalView.style.display = 'none';
+  catView.style.display = 'none';
+  tintView.style.display = 'none';
+  circleView.style.display = 'none';
+  squareView.style.display = 'block';
+})

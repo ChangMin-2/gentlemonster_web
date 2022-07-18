@@ -51,6 +51,18 @@ topBtn.addEventListener('click', ()=>{
     scrollTo: 0
   })
 })
+window.addEventListener('scroll',function(){
+  if(this.scrollY>200){
+    gsap.to(topBtn, 0.3, {
+      opacity:1
+    })
+  }else {
+    gsap.to(topBtn, 0.3 ,{
+      opacity:0
+    })
+  }
+})
+
 
 /* Header&search&cart */
 
@@ -68,6 +80,68 @@ serviceLists.forEach(function(serviceList, index){
     }else {
       serviceList.classList.add('click')
     }
-   
+  })
+})
+
+const tabs = document.querySelectorAll('.tab')
+const productImgs = document.querySelectorAll('.product__img img')
+
+tabs[1].addEventListener('mouseover',function(){
+  productImgs.forEach((productImg)=>{
+    productImg.src =  productImg.src.replace('black','blue')
+  })
+})
+tabs[1].addEventListener('mouseout',function(){
+  productImgs.forEach((productImg)=>{
+    productImg.src =  productImg.src.replace('blue','black')
+  })
+})
+tabs[2].addEventListener('mouseover',function(){
+  productImgs.forEach((productImg)=>{
+    productImg.src =  productImg.src.replace('black','brown')
+  })
+})
+tabs[2].addEventListener('mouseout',function(){
+  productImgs.forEach((productImg)=>{
+    productImg.src =  productImg.src.replace('brown','black')
+  })
+})
+tabs[3].addEventListener('mouseover',function(){
+  productImgs.forEach((productImg)=>{
+    productImg.src =  productImg.src.replace('black','orange')
+  })
+})
+tabs[3].addEventListener('mouseout',function(){
+  productImgs.forEach((productImg)=>{
+    productImg.src =  productImg.src.replace('orange','black')
+  })
+})
+tabs[4].addEventListener('mouseover',function(){
+  productImgs.forEach((productImg)=>{
+    productImg.src =  productImg.src.replace('black','pink')
+  })
+})
+tabs[4].addEventListener('mouseout',function(){
+  productImgs.forEach((productImg)=>{
+    productImg.src =  productImg.src.replace('pink','black')
+  })
+})
+
+const hearts = document.querySelectorAll('.favorite_border-icon');
+const countheartBtn = document.querySelector('.count-heart');
+let heartCount = 0;
+
+countheartBtn.textContent 
+
+hearts.forEach(function(heart, index){
+  heart.addEventListener('click',function(){
+    heartCount++;
+    if(heartCount>1) {
+      heartCount=0;
+      heart.innerHTML = '관심상품 추가'
+    }else if(heartCount==1){
+      heart.innerHTML = '관심상품 삭제'
+    }
+    countheartBtn.innerText= heartCount; 
   })
 })
