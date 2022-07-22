@@ -551,7 +551,7 @@ a {text-decoration: none; color: inherit;}
   justify-content: space-between;
   align-items: center;
   color: #757575;
-  padding: 0 3px;
+  padding: 0 10px;
 }
 .product .swiper-slide .prodect__text-area p:nth-child(1) {
   font-size: 12px;
@@ -760,64 +760,6 @@ a {text-decoration: none; color: inherit;}
   font-family: "GentleMonster";
   font-size: 50px;
   font-weight: bold;
-}
-.sns .left-move1,
-.sns .left-move2 {
-  display: flex;
-}
-.sns .left-move1 img,
-.sns .left-move2 img {
-  transform: translateX(-504px);
-}
-.sns .down-move1 img,
-.sns .down-move2 img {
-  transform: translateY(-504px);
-}
-.sns .right-move1, 
-.sns .right-move2 {
-  display: flex;
-}
-
-@keyframes leftrotate1 {
-  0% {transform: translateX(-504px);}
-  100% {transform: translateX(-252px);}
-}
-@keyframes downrotate1 {
-  0% {transform: translateY(-504px);}
-  100% {transform: translateY(-252px);}
-}
-@keyframes rightrotate1 {
-  0% {transform: translateX(0px);}
-  100% {transform: translateX(-252px);}
-}
-@keyframes uprotate1 {
-  0% {transform: translateY(0px);}
-  100% {transform: translateY(-252px);}
-}
-
-.sns .left-move1 img {
-  animation: leftrotate1 5s linear both;
-}
-.sns .left-move2 img {
-  animation: leftrotate1 5s 5s linear both;
-}
-.sns .down-move1 img {
-  animation: downrotate1 5s 10s linear both;
-}
-.sns .down-move2 img {
-  animation: downrotate1 5s 15s linear both;
-}
-.sns .right-move1 img {
-  animation: rightrotate1 5s linear both;
-}
-.sns .right-move2 img {
-  animation: rightrotate1 5s 5s linear both;
-}
-.sns .up-move1 img {
-  animation: uprotate1 5s 10s linear both ;
-}
-.sns .up-move2 img {
-  animation: uprotate1 5s 15s linear both ;
 }
 
 /* footer */
