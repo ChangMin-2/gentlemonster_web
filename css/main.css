@@ -392,6 +392,24 @@ a {text-decoration: none; color: inherit;}
 }
 
 /* ranking */
+.rankRadio {display: none;}
+#rankRadio1:checked ~ .text-area .rank ul .rank1 {height: auto;}
+#rankRadio2:checked ~ .text-area ul .rank2 {height: auto;}
+#rankRadio3:checked ~ .text-area ul .rank3 {height: auto;}
+#rankRadio4:checked ~ .text-area ul .rank4 {height: auto;}
+#rankRadio5:checked ~ .text-area ul .rank5 {height: auto;}
+#rankRadio1:checked ~ .text-area ul .rank1 span {display: block;font-weight: 700;}
+#rankRadio2:checked ~ .text-area ul .rank2 span {display: block;font-weight: 700;}
+#rankRadio3:checked ~ .text-area ul .rank3 span {display: block;font-weight: 700;}
+#rankRadio4:checked ~ .text-area ul .rank4 span {display: block;font-weight: 700;}
+#rankRadio5:checked ~ .text-area ul .rank5 span {display: block;font-weight: 700;}
+#rankRadio1:checked ~ .img-area .img-area-01 {display: flex;}
+#rankRadio2:checked ~ .img-area .img-area-02 {display: flex;}
+#rankRadio3:checked ~ .img-area .img-area-03 {display: flex;}
+#rankRadio4:checked ~ .img-area .img-area-04 {display: flex;}
+#rankRadio5:checked ~ .img-area .img-area-05 {display: flex;}
+
+
 .ranking {
   margin-top: 150px;
 }
@@ -419,13 +437,6 @@ a {text-decoration: none; color: inherit;}
   margin: 10px 0;
   display: block;
 }
-.ranking .rank li.hover span {
-  display: block;
-  font-weight: 700;
-}
-.ranking .rank li.hover {
-  height: auto;
-}
 .ranking .rank li .rank-hover__img a{
   font-size: 12px;
   text-align: end;
@@ -433,7 +444,7 @@ a {text-decoration: none; color: inherit;}
   display: block;
 }
 .ranking .img-hover-area {
-  display: flex;
+  display: none;
 }
 .ranking .img-area img {
   display: block;
@@ -453,12 +464,6 @@ a {text-decoration: none; color: inherit;}
 .ranking .img-area .rank-img__right__bottom div {
   width: 224px;
   margin-left: 10px;
-}
-.ranking .img-area .img-area-02,
-.ranking .img-area .img-area-03, 
-.ranking .img-area .img-area-04, 
-.ranking .img-area .img-area-05 {
-  display: none;
 }
 .ranking .rank-img__right__bottom .logo {
   font-family: "GentleMonster";

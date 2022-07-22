@@ -102,30 +102,25 @@ visualStart.addEventListener('click',function(){
 // ranking
 const rankEls = document.querySelectorAll('.rank li');
 const ranking = document.querySelector('.rank');
-const hoverAreaImg = document.querySelectorAll('.img-hover-area');
-
-ranking.addEventListener('mouseleave',function(){
-  rankEls[0].classList.add('hover')
-  hoverAreaImg[0].style.display = 'flex'
-})
+let count = 0
 
 rankEls.forEach(function(rankEl,index){
   rankEl.addEventListener('mouseover',function(){
-    rankEls[0].classList.remove('hover')
-    hoverAreaImg[0].style.display = 'none'
-    rankEl.classList.add('hover')
-    if(rankEl.classList.contains('hover')){
-      hoverAreaImg[index].style.display = 'flex'
-    }
-  })
-  rankEl.addEventListener('mouseleave',function(){
-    rankEl.classList.remove('hover')
-    if(!rankEl.classList.contains('hover')){
-      hoverAreaImg[index].style.display = 'none'
-    }
+    $('.rankRadio').eq(index).prop('checked',true);
+    stopTap();
   })
 })
 
+let looptap = setInterval(function(){
+  $('.rankRadio').eq(count).prop('checked',true);
+  count++
+  if(count == 5) {
+    count = 0;
+  }
+},2500);
+function stopTap(){
+  clearInterval(looptap);
+}
 
 // product
 var productSwiper = new Swiper(".product__swiper", {

@@ -11,6 +11,8 @@
   <!-- swiper -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
   <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!-- google icons -->
   <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
   <!-- xeicon -->
@@ -263,13 +265,18 @@
 
   <section class="ranking">
     <div class="inner">
+      <input type="radio" name="rankRadio" id="rankRadio1" class="rankRadio" checked>
+      <input type="radio" name="rankRadio" id="rankRadio2" class="rankRadio">
+      <input type="radio" name="rankRadio" id="rankRadio3" class="rankRadio">
+      <input type="radio" name="rankRadio" id="rankRadio4" class="rankRadio">
+      <input type="radio" name="rankRadio" id="rankRadio5" class="rankRadio">
       <div class="text-area">
         <div class="ranking__title">
           <p>KEYWORD<br>RANKGING</p>
         </div>
         <div class="rank">
           <ul>
-            <li class="hover">
+            <li class="rank1">
               <span>1. 선글라스</span>
               <div class="rank-hover__img">
                 <a href="./sub_page/sub_page.html">더보기</a>
@@ -280,7 +287,7 @@
                 <img src="./images/main_img/rank_01_05.jpg" alt="rank">
               </div>
             </li>
-            <li>
+            <li class="rank2">
               <span>2. 안경</span>
               <div class="rank-hover__img">
                 <a href="#!">더보기</a>
@@ -291,7 +298,7 @@
                 <img src="./images/main_img/rank_02_05.jpg" alt="rank">
               </div>
             </li>
-            <li>
+            <li class="rank3">
               <span>3. 선물추천</span>
               <div class="rank-hover__img">
                 <a href="#!">더보기</a>
@@ -302,7 +309,7 @@
                 <img src="./images/main_img/rank_03_05.jpg" alt="rank">
               </div>
             </li>
-            <li>
+            <li class="rank4">
               <span>4. 2022 컬렉션</span>
               <div class="rank-hover__img">
                 <a href="#!">더보기</a>
@@ -313,7 +320,7 @@
                 <img src="./images/main_img/rank_04_05.jpg" alt="rank">
               </div>
             </li>
-            <li>
+            <li class="rank5">
               <span>5. 틴트렌즈</span>
               <div class="rank-hover__img">
                 <a href="#!">더보기</a>
