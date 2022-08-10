@@ -1,6 +1,5 @@
 /* common */
-/* gentle font */
-@import url('https://db.onlinewebfonts.com/c/04b98e0c477863adcdaae7d4d98c063a?family=GentleMonster');
+
 /* google font */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 * {margin: 0; padding: 0; font-family: 'Noto Sans KR', sans-serif; box-sizing: border-box;} 
@@ -32,7 +31,7 @@ a {text-decoration: none; color: inherit;}
 }
 .header .logo {
   font-size: 24px;
-  font-family: "GentleMonster";
+  font-weight: bold;
   position: absolute;
   top: 0;
   left: 0;
@@ -466,13 +465,11 @@ a {text-decoration: none; color: inherit;}
   margin-left: 10px;
 }
 .ranking .rank-img__right__bottom .logo {
-  font-family: "GentleMonster";
   font-weight: bold;
   font-size: 24px;
   margin-bottom: 5px;
 }
 .ranking .rank-img__right__bottom p:nth-child(2) {
-  font-family: "GentleMonster";
   text-transform: uppercase;
   font-weight: bold;
   font-size: 20px;
@@ -664,7 +661,6 @@ a {text-decoration: none; color: inherit;}
   width: 395px;
 }
 .collabo__text .collabo__main__text {
-  font-family: "GentleMonster";
   font-size: 24px;
   text-align: center;
   line-height: 50px;
@@ -757,7 +753,6 @@ a {text-decoration: none; color: inherit;}
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-family: "GentleMonster";
   font-size: 50px;
   font-weight: bold;
 }
@@ -780,7 +775,6 @@ a {text-decoration: none; color: inherit;}
   margin-bottom: 10px
 }
 .footer__top .footer__title>p {
-  font-family: "GentleMonster";
   font-weight: bold;
   font-size: 24px;
 }
@@ -825,7 +819,7 @@ a {text-decoration: none; color: inherit;}
   color: #757575;
 }
 .footer__bottom .inner .copyright {
-  font-family: "GentleMonster";
+  font-weight: bold;
 }
 .footer__bottom .inner .address {
   font-size: 10px;
